@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Layouts & Responsive Web Design — Assignment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Responsive Layout Demo</h1>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout-grid">
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <ul class="sidebar-links">
+        <li><a href="#link1">Getting Started</a></li>
+        <li><a href="#link2">Flexbox Basics</a></li>
+        <li><a href="#link3">Grid Basics</a></li>
+        <li><a href="#link4">Media Queries</a></li>
+      </ul>
+      <div class="promo">
+        <h3>Tip</h3>
+        <p>Resize the browser to see the grid change across breakpoints.</p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section id="home" class="hero">
+        <h2>Build once, adapt everywhere</h2>
+        <p>This page demonstrates modern CSS layouts with Flexbox and Grid. It also shows how responsive design changes the layout for phones, tablets, and desktops.</p>
+        <a href="#features" class="button">See features</a>
+      </section>
+
+      <section id="features" class="features">
+        <h2>Features</h2>
+        <ul class="feature-list">
+          <li>Grid for the main page layout</li>
+          <li>Flexbox for navigation and cards</li>
+          <li>Responsive breakpoints using media queries</li>
+          <li>Relative units for scalable spacing and text</li>
+        </ul>
+      </section>
+
+      <section id="gallery" class="cards">
+        <h2>Gallery (Flex Cards)</h2>
+        <p class="section-note">Cards use <strong>Flexbox</strong> to wrap and align neatly.</p>
+        <div class="card-row">
+          <article class="card">
+            <img src="https://via.placeholder.com/640x360" alt="Placeholder image 1" />
+            <h3>Card One</h3>
+            <p>Flex items wrap and keep consistent spacing.</p>
+            <a class="button" href="#!">Open</a>
+          </article>
+          <article class="card">
+            <img src="https://via.placeholder.com/640x360" alt="Placeholder image 2" />
+            <h3>Card Two</h3>
+            <p>Images scale responsively with max-width and auto height.</p>
+            <a class="button" href="#!">Open</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form class="contact-form" action="#!" method="post">
+          <label>
+            Name
+            <input type="text" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Message
+            <textarea placeholder="Your message" rows="4"></textarea>
+          </label>
+          <button class="button" type="submit">Send</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made for the “CSS Layouts & Responsive Web Design” assignment. Raw CSS only.</p>
+    </div>
+  </footer>
+</body>
+</html>

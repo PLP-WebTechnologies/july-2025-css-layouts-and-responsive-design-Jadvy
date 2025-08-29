@@ -1,0 +1,56 @@
+/* CSS Layouts & Responsive Web Design Assignment */
+
+/* Variables */
+:root {
+  --bg: #f7f8fc;
+  --text: #222;
+  --muted: #5a6270;
+  --brand: #2a66f8;
+  --card: #ffffff;
+  --line: #e1e4ea;
+  --radius: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+}
+
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+img { max-width: 100%; height: auto; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-4); }
+
+/* Header with Flexbox */
+.site-header { background: var(--card); border-bottom: 1px solid var(--line); }
+.site-header .container { display: flex; justify-content: space-between; align-items: center; padding: var(--space-5); }
+.site-nav ul { list-style: none; display: flex; gap: var(--space-4); }
+.site-nav a { text-decoration: none; color: var(--text); padding: 4px 8px; }
+.site-nav a:hover { background: #eef3ff; border-radius: 6px; }
+
+/* Grid layout */
+.layout-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-5); margin: var(--space-5) 0; }
+.sidebar { background: var(--card); border: 1px solid var(--line); padding: var(--space-5); border-radius: var(--radius); }
+.content { display: grid; gap: var(--space-5); }
+
+.hero, .features, .cards, .contact { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--space-5); }
+
+/* Flex cards */
+.card-row { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+.card { flex: 1 1 240px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.card h3, .card p { padding: 8px 12px; }
+.button { background: var(--brand); color: #fff; text-decoration: none; padding: 6px 12px; border-radius: 6px; display: inline-block; margin: 8px 12px; }
+
+/* Contact */
+.contact-form { display: grid; gap: 12px; max-width: 500px; }
+.contact-form input, .contact-form textarea { padding: 8px; border: 1px solid var(--line); border-radius: 6px; }
+
+/* Footer */
+.site-footer { text-align: center; color: var(--muted); padding: var(--space-5); }
+
+/* Media queries */
+@media (min-width: 768px) {
+  .layout-grid { grid-template-columns: 260px 1fr; }
+}
+@media (min-width: 1024px) {
+  .layout-grid { grid-template-columns: 300px 1fr; }
+}
